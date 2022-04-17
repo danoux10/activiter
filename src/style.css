@@ -1,0 +1,317 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: black;
+  color: white;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+label, input {
+  cursor: pointer;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+.close {
+  width: 0;
+  height: 0;
+  transform: scale(0);
+  transition: all ease 0.5s;
+}
+
+header#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  border-bottom: 1px solid #DA0037;
+  border-radius: 100px;
+}
+header#navbar nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header#navbar nav ul li {
+  font-weight: bolder;
+  font-family: cursive;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #DA0037;
+}
+header#navbar nav ul li:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1em;
+  background: #DA0037;
+  transition: all ease 0.5s;
+}
+header#navbar nav ul li:hover {
+  text-shadow: 1px 1px 1px #EDEDED;
+}
+header#navbar nav ul li:hover:after {
+  width: 100%;
+}
+header#navbar nav ul li.active {
+  color: #EDEDED;
+  text-shadow: 2px 1px 1px #DA0037;
+}
+
+main {
+  padding: 0 0.5% 0;
+  position: relative;
+  margin-top: 3.5%;
+}
+main section {
+  position: absolute;
+  width: 99vw;
+}
+
+section#graph .nav-content {
+  margin: 0 0 1% 0;
+  display: flex;
+  align-items: center;
+  font-family: cursive;
+}
+section#graph .nav-content #navGraph {
+  padding: 0 0 0 0.5%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10vh;
+  border-right: 1px solid #DA0037;
+  border-left: 1px solid #DA0037;
+  border-radius: 20px;
+}
+section#graph .nav-content #navGraph div {
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 88%;
+}
+section#graph .nav-content #navGraph div:nth-child(2) {
+  margin-top: 10%;
+}
+section#graph .nav-content #navGraph div.active span {
+  background: green;
+  border: 2px solid rgba(0, 255, 0, 0.5);
+}
+section#graph .nav-content #navGraph div.active span .sphere {
+  transform: translate(2vw);
+  transition: all ease 0.5s;
+}
+section#graph .nav-content #navGraph div span {
+  display: flex;
+  height: 2.5vh;
+  width: 3vw;
+  border-radius: 50px;
+  background: darkred;
+  border: 2px solid red;
+}
+section#graph .nav-content #navGraph div span .sphere {
+  margin: 0.5%;
+  display: block;
+  border: 1px solid #171717;
+  width: 0.9vw;
+  height: 2.2vh;
+  background: #EDEDED;
+}
+section#graph .nav-content #navGraph div h3 {
+  margin: 0 0 0 5%;
+}
+section#graph .nav-content .toggle-nav {
+  margin: 0 0 0 1%;
+  border-right: 1px solid #DA0037;
+  border-left: 1px solid #DA0037;
+  border-radius: 20px;
+  width: 89%;
+  height: 10vh;
+  position: relative;
+}
+section#graph .nav-content .toggle-nav nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+section#graph .nav-content .toggle-nav nav ul {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+section#graph .nav-content .toggle-nav nav ul li.active {
+  color: #DA0037;
+  text-shadow: 2px 1px 1px #EDEDED;
+}
+
+section#graph article {
+  border: 1px solid;
+  height: 77vh;
+  width: 100%;
+  position: absolute;
+}
+section#graph article#graphContent {
+  background: rgba(173, 216, 230, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section#graph article#graphContent .graph {
+  border: 1px solid black;
+  background: rgba(192, 192, 192, 0.5);
+  width: 90%;
+  height: 90%;
+}
+section#graph article#graphContent .graph canvas:nth-child(1) {
+  background: rgba(128, 0, 128, 0.5);
+}
+section#graph article#graphContent .graph canvas:nth-child(2) {
+  background: rgba(0, 255, 0, 0.5);
+}
+section#graph article#graphContent #tableGraph {
+  background: blue;
+}
+section#graph fieldset {
+  position: absolute;
+  right: 1%;
+  background: rgba(68, 68, 68, 0.5);
+  display: flex;
+  padding-top: 0;
+  flex-direction: column;
+  align-items: end;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 1px #EDEDED;
+  transition: all ease 0.5s;
+}
+section#graph fieldset legend {
+  text-align: center;
+  text-transform: uppercase;
+}
+section#graph fieldset #closeViewGraph {
+  height: 20px;
+  width: 20px;
+  margin: 0 0 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+section#graph fieldset #closeViewGraph span {
+  position: absolute;
+  display: block;
+  background: #EDEDED;
+  width: 100%;
+  height: 5px;
+  border-radius: 50px;
+}
+section#graph fieldset #closeViewGraph span:nth-child(1) {
+  transform: rotate(45deg);
+}
+section#graph fieldset #closeViewGraph span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+section#graph fieldset form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#graph fieldset form span {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+section#graph fieldset form span:nth-child(2n) {
+  margin: 5% 0;
+}
+section#graph fieldset form span input {
+  background: none;
+  border: none;
+  box-shadow: 1px 1px 1px #EDEDED;
+  color: #EDEDED;
+}
+section#graph fieldset form span input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+section#graph fieldset form span label:after {
+  content: ":";
+  color: #EDEDED;
+  font-weight: bolder;
+}
+section#graph fieldset form span.select-activity {
+  width: 50%;
+  position: relative;
+  background: #000;
+}
+section#graph fieldset form span.select-activity:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "▼";
+  color: white;
+  pointer-events: none;
+}
+section#graph fieldset form span.select-activity select {
+  cursor: pointer;
+  appearance: none;
+  width: 100%;
+  background: none;
+  color: #EDEDED;
+  box-shadow: 1px 1px 1px #EDEDED;
+}
+section#graph fieldset form span.select-activity select option {
+  background: #444444;
+  height: 5vh;
+}
+section#graph fieldset form span.btn-containt {
+  margin: 5% 0 0;
+}
+section#graph fieldset form span.btn-containt button {
+  background: none;
+  border: 1px solid transparent;
+  transition: all ease 0.5s;
+  box-shadow: none;
+  cursor: pointer;
+  color: #EDEDED;
+  border-radius: 50px;
+}
+section#graph fieldset form span.btn-containt button:hover {
+  font-weight: bolder;
+}
+section#graph fieldset form span.btn-containt .valide-btn {
+  background: #008800;
+}
+section#graph fieldset form span.btn-containt .valide-btn:hover {
+  background: rgba(0, 136, 0, 0.5);
+  border-color: lime;
+}
+section#graph fieldset form span.btn-containt .today-btn {
+  background: #000088;
+}
+section#graph fieldset form span.btn-containt .today-btn:hover {
+  background: rgba(0, 0, 136, 0.5);
+  border-color: lightskyblue;
+}
+
+article#graphForm {
+  background: rgba(0, 255, 0, 0.5);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="coucou"></title>
+    <link href="../src/style.css" rel="stylesheet">
+</head>
+<body>
+<!--link navbar-->
+<header id="navbar">
+    <nav>
+        <ul>
+            <li id="viewGraph">
+                Graph
+            </li>
+            <li id="viewActivity">
+                activiter
+            </li>
+            <li id="viewIcon">
+                icon
+            </li>
+            <li id="viewColor">
+                color
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!--link graphique-->
+    <section id="graph">
+        <!--sublink navgraph-->
+        <div class="nav-content">
+            <nav id="navGraph">
+                <div id="viewGraphContent">
+                <span class="graphNav">
+                    <span class="sphere"></span>
+                </span>
+                    <h3>Graph</h3>
+                </div>
+                <div id="viewGraphForm">
+                <span class="graphNav">
+                    <span class="sphere"></span>
+                </span>
+                    <h3>Add Data</h3>
+                </div>
+            </nav>
+            <div class="toggle-nav">
+                <nav id="navGraphChoose">
+                    <ul>
+                        <li id="btnPieGraph">Pie</li>
+                        <li id="btnBarGraph">Bar</li>
+                        <li id="btnTableGraph">Table</li>
+                        <li>Download</li>
+                        <li id="bntViewGraphForm">Select View</li>
+                    </ul>
+                </nav>
+                <nav id="navGraphFrom">
+                    <ul>
+                        <li>text</li>
+                        <li>text</li>
+                        <li>text</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <article id="graphContent">
+            <div class="graph">
+                <canvas id="pieGraph"></canvas>
+                <canvas id="barGraph"></canvas>
+                <div id="tableGraph">
+
+                </div>
+            </div>
+            <fieldset id="viewFormGraph">
+                <legend>select view</legend>
+                <div id="closeViewGraph">
+                    <span></span>
+                    <span></span>
+                </div>
+                <form action="" method="post">
+                    <span>
+                       <label for="">Date Start</label>
+                       <input type="date">
+                    </span>
+                    <span>
+                        <label for="">Date End</label>
+                        <input type="date">
+                    </span>
+                    <span>
+                        <label for="">Hours Start</label>
+                        <input type="time">
+                    </span>
+                    <span>
+                        <label for="">Hours End</label>
+                        <input type="time">
+                    </span>
+                    <span class="select-activity">
+                        <select id="" name="">
+                            <option value="">Activity</option>
+                        </select>
+                    </span>
+                    <span class="btn-containt">
+                        <button class="valide-btn">Valider</button>
+                        <button class="today-btn">Today</button>
+                    </span>
+                </form>
+            </fieldset>
+        </article>
+        <article id="graphForm">
+        </article>
+    </section>
+    <section id="activity">
+
+    </section>
+    <section id="icon">
+
+    </section>
+    <section id="color">
+
+    </section>
+</main>
+<script src="../src/script.js"></script>
+</body>
+</html>

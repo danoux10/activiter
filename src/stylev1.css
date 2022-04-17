@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: black;
+  color: white;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.close {
+  transform: scale(0);
+  width: 0;
+  height: 0;
+  transition: all ease 0.5s;
+}
+
+.over {
+  height: 100%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul li {
+  cursor: pointer;
+}
+header nav ul li.active {
+  color: lime;
+}
+
+section {
+  border: 1px solid red;
+  height: 80vh;
+  position: relative;
+}
+section div {
+  height: 50%;
+}
+section div#graph-content {
+  border: 1px solid;
+  display: flex;
+  justify-content: space-around;
+  transition: all ease 0.5s;
+}
+section div#graph-content.over {
+  height: 100%;
+}
+section div#graph-content canvas {
+  transition: all ease 0.5s;
+  width: 100%;
+  height: 100%;
+}
+section div#graph-content canvas.close {
+  width: 0;
+}
+section div#graph-content canvas:nth-child(1) {
+  background: darkred;
+}
+section div#graph-content canvas:nth-child(2) {
+  background: darkgreen;
+}
+section div#table {
+  border: 1px solid khaki;
+  transition: all ease 0.5s;
+}
+section div#table canvas {
+  height: 100%;
+  width: 100%;
+  background: darkblue;
+}
+
+/*# sourceMappingURL=stylev1.css.map */
