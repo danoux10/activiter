@@ -14,14 +14,35 @@ a {
   text-decoration: none;
 }
 
-.close {
+.scale-0 {
   transform: scale(0);
-  width: 0;
-  height: 0;
-  transition: all ease 0.5s;
 }
 
-.over {
+.scale-100 {
+  transform: scale(1);
+}
+
+.w-0 {
+  width: 0;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-0 {
+  height: 0;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-full {
   height: 100%;
 }
 
@@ -55,11 +76,6 @@ section div#graph-content.over {
 }
 section div#graph-content canvas {
   transition: all ease 0.5s;
-  width: 100%;
-  height: 100%;
-}
-section div#graph-content canvas.close {
-  width: 0;
 }
 section div#graph-content canvas:nth-child(1) {
   background: darkred;
@@ -67,13 +83,11 @@ section div#graph-content canvas:nth-child(1) {
 section div#graph-content canvas:nth-child(2) {
   background: darkgreen;
 }
-section div#table {
-  border: 1px solid khaki;
+section div.table {
+  border: 1px solid purple;
   transition: all ease 0.5s;
 }
-section div#table canvas {
-  height: 100%;
-  width: 100%;
+section div.table canvas {
   background: darkblue;
 }
 
